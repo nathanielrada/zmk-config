@@ -15,7 +15,7 @@
                 &kp TAB       &kp Q &kp W &kp E &kp R &kp T 
                 &kp CAPSLOCK  &kp A &kp S &kp D &kp F &kp G
                 &kp LSHIFT    &kp Z &kp X &kp C &kp V &kp B
-                                    &kp ALT &kp SPACE &mo 1
+                                    &kp LALT &kp SPACE &mo 1
             >;
         };
     };
