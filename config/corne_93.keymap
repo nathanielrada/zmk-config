@@ -20,7 +20,7 @@
             bindings = <
                 &kp M &kp W &kp E &kp R &kp T &kp Y
                 &kp A &kp S &kp D &kp F &kp G &kp H
-                &kp Z &kp X &kp C &kp V &kp B &kp N
+                &kp Z &kp X &kp L &kp V &kp B &kp N
                 &kp U &kp I &kp O &kp P &kp H &kp J
             >;
         };
