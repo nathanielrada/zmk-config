@@ -1,0 +1,16 @@
+if SHIELD_TESTTEST_LEFT
+
+config ZMK_KEYBOARD_NAME
+    default "testtest"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+endif # SHIELD_TESTTEST_LEFT
+
+if SHIELD_TESTTEST_LEFT || SHIELD_TESTTEST_RIGHT
+
+config ZMK_SPLIT
+    default y
+
+endif # SHIELD_TESTTEST_LEFT || SHIELD_TESTTEST_RIGHT
