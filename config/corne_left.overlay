@@ -1,4 +1,4 @@
-#include "corne_93.dtsi"
+#include "corne.dtsi"
 
 &kscan {
     row-gpios
