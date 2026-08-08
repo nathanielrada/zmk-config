@@ -36,10 +36,12 @@
 				};
 				zmk {
 							bindings = <
+								&trans
 							>;
 				};
 				power {
 							bindings = <
+								&trans
 							>;
 
 				};
