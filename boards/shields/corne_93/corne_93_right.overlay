@@ -18,6 +18,10 @@
         ;
 };
 
+&default_transform {
+    col-offset = <6>;
+};
+
 /* &default_transform { */
 /*     columns = <6>; */
 /*     rows = <4>; */
