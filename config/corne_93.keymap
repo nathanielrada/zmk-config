@@ -34,4 +34,5 @@
                                    &kp LALT &kp SPACE &trans  &trans &kp RET &kp RGUI
 								>;
 				};
+		};
 };
