@@ -36,7 +36,12 @@
 				};
 				zmk {
 							bindings = <
-							>
+							>;
 				};
+				power {
+							bindings = <
+							>;
+
+				}
 		};
 };
