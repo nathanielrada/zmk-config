@@ -1,26 +1,19 @@
 #include "corne_93.dtsi"
-/ {
-	kscan0: kscan {
-			wakeup-source;
 
-			row-gpios
-					= <&pro_micro 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-					, <&pro_micro 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-					, <&pro_micro 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-					, <&pro_micro 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-					;
+&kscan {
+    row-gpios
+        = <&pro_micro 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+        , <&pro_micro 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+        , <&pro_micro 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+        , <&pro_micro 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+        ;
 
-			col-gpios
-					= <&pro_micro 6 GPIO_ACTIVE_HIGH>
-					, <&pro_micro 3 GPIO_ACTIVE_HIGH>
-					, <&pro_micro 7 GPIO_ACTIVE_HIGH>
-					, <&pro_micro 8 GPIO_ACTIVE_HIGH>
-					, <&pro_micro 9 GPIO_ACTIVE_HIGH>
-					, <&pro_micro 2 GPIO_ACTIVE_HIGH>
-					;
-	};
-	soft_off_wakers {
-			compatible = "zmk,soft-off-wakeup-sources";
-			wakeup-sources = <&kscan0>;
-	};
+    col-gpios
+        = <&pro_micro 6 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 3 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 7 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 8 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 9 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 2 GPIO_ACTIVE_HIGH>
+        ;
 };
