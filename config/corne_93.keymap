@@ -36,12 +36,18 @@
 				};
 				zmk {
 							bindings = <
-								&trans
+								&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans 
+								&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans 
+								&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans 
+								                     &trans &trans &trans &trans &trans &trans 
 							>;
 				};
 				power {
 							bindings = <
-								&trans
+								&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans 
+								&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans 
+								&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans 
+								                     &trans &trans &trans &trans &trans &trans 
 							>;
 
 				};
