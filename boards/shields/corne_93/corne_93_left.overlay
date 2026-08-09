@@ -1,6 +1,8 @@
 #include "corne_93.dtsi"
 
-&kscan {
+kscan0: kscan {
+		wakeup-source;
+
     row-gpios
         = <&pro_micro 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
         , <&pro_micro 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
@@ -16,6 +18,10 @@
         , <&pro_micro 9 GPIO_ACTIVE_HIGH>
         , <&pro_micro 2 GPIO_ACTIVE_HIGH>
         ;
+};
+soft_off_wakers {
+		compatible = "zmk,soft-off-wakeup-sources";
+		wakeup-sources = <&kscan0>;
 };
 /* &default_transform { */
 /*     columns = <6>; */
