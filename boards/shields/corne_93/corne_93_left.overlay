@@ -20,7 +20,9 @@
 / {
     soft_off_gpio_key: soft_off_gpio_key {
         compatible = "gpio-keys";
-        gpios = <&pro_micro 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+				key_0 {
+					gpios = <&pro_micro 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+				};
     };
 
     wakeup_scan: wakeup_scan {
