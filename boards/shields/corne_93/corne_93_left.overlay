@@ -21,7 +21,7 @@
     soft_off_gpio_key: soft_off_gpio_key {
         compatible = "gpio-keys";
 				key_0: key_0 {
-					gpios = <&pro_micro 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+					gpios = <&pro_micro 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
 				};
     };
 
