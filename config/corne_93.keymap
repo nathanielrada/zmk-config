@@ -46,5 +46,11 @@
 &trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &trans  &trans  &kp F11  &kp F12  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
+
+        FPS_gaming {
+            bindings = <
+&kp N1  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &trans  &trans  &trans  &trans  &trans  &trans  &kp E  &kp LSHFT  &kp A  &kp W  &kp D  &kp F  &trans  &trans  &trans  &trans  &trans  &trans  &kp M  &kp LCTRL  &trans  &kp S  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp SPACE  &trans  &trans  &trans  &trans
+            >;
+        };
     };
 };
