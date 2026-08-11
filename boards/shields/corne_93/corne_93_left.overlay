@@ -17,3 +17,21 @@
         , <&pro_micro 2 GPIO_ACTIVE_HIGH>
         ;
 };
+/ {
+    soft_off_gpio_key: soft_off_gpio_key {
+        compatible = "gpio-keys";
+        gpios = <&pro_micro 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+    };
+
+    wakeup_scan: wakeup_scan {
+        compatible = "zmk,gpio-key-wakeup-trigger";
+        trigger = <&soft_off_gpio_key>;
+        wakeup-source;
+        extra-gpios = <&pro_micro 2 GPIO_ACTIVE_HIGH>;
+    };
+
+    soft_off_wakers {
+        compatible = "zmk,soft-off-wakeup-sources";
+        wakeup-sources = <&kscan>, <&wakeup_scan>;
+    };
+};
