@@ -51,21 +51,25 @@
 																		RC(3,3) RC(3,4) RC(3,5) RC(3,6) RC(3,7) RC(3,8)
 				>;
     };
-    soft_off_gpio_key: soft_off_gpio_key {
-        compatible = "gpio-keys";
-        // Point this to the specific ROW pin of your chosen wakeup key
-        // For example, if your top-left key is on Row 0 tied to pin GPIO 0 6:
-        wakeup_key: wakeup_key {
-            gpios = <&pro_micro 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
-        };
-    };
-    soft_off_waker: soft_off_waker {
-        compatible = "zmk,gpio-key-wakeup-trigger";
-        trigger = <&soft_off_gpio_key>;
-        wakeup-source;
-        
-        /* For col2row, list the specific Column pin(s) tied to your wakeup key */
-        /* If you want the top-left key (Col 0, Row 0) to wake it, put Col 0's pin here */
-        extra-gpios = <&pro_micro 6 GPIO_ACTIVE_HIGH>; 
-    };
+};
+/{
+	soft_off_waker: soft_off_waker {
+			compatible = "zmk,gpio-key-wakeup-trigger";
+			trigger = <&soft_off_gpio_key>;
+			wakeup-source;
+			
+			/* For col2row, list the specific Column pin(s) tied to your wakeup key */
+			/* If you want the top-left key (Col 0, Row 0) to wake it, put Col 0's pin here */
+			extra-gpios = <&pro_micro 6 GPIO_ACTIVE_HIGH>; 
+	};
+};
+/{
+	soft_off_gpio_key: soft_off_gpio_key {
+			compatible = "gpio-keys";
+			// Point this to the specific ROW pin of your chosen wakeup key
+			// For example, if your top-left key is on Row 0 tied to pin GPIO 0 6:
+			wakeup_key: wakeup_key {
+					gpios = <&pro_micro 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+			};
+	};
 };
