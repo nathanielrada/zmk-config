@@ -12,7 +12,7 @@
         mo_off: mo_off {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&tog 6>;
+            bindings = <&macro_pause_for_release>, <&tog 6>;
             label = "MO_OFF";
         };
     };
@@ -21,7 +21,7 @@
         game_exit: game_exit {
             compatible = "zmk,behavior-hold-tap";
             label = "GAME_EXIT";
-            bindings = <&mo>, <&tog>;
+            bindings = <&mo_off>, <&tog>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
