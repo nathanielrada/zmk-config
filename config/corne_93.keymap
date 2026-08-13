@@ -10,7 +10,7 @@
 
     macros {
         mo_off: mo_off {
-            compatible = "zmk,behavior-macro";
+            compatible = "zmk,behavior-macro-controlling-layer";
             #binding-cells = <0>;
             bindings = <&macro_pause_for_release>, <&tog 6>;
             label = "MO_OFF";
@@ -22,7 +22,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "GAME_EXIT";
             bindings = <&mo_off>, <&tog>;
-
+						flavor = "hold-preferred";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
