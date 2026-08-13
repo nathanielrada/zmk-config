@@ -8,6 +8,26 @@
     // Define a default keymap here.
     // See https://zmk.dev/docs/development/hardware-integration/new-shield#default-keymap.
 
+    macros {
+        mo_off: mo_off {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&tog 6>;
+            label = "MO_OFF";
+        };
+    };
+
+    behaviors {
+        game_exit: game_exit {
+            compatible = "zmk,behavior-hold-tap";
+            label = "GAME_EXIT";
+            bindings = <&mo>, <&tog>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -49,7 +69,7 @@
 
         FPS_gaming {
             bindings = <
-&kp TAB  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &trans  &trans  &trans  &trans  &trans  &tog 6  &kp E  &kp LSHFT  &kp A  &kp W  &kp D  &kp F  &trans  &trans  &trans  &trans  &trans  &trans  &kp M  &kp LCTRL  &trans  &kp S  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp SPACE  &mo 7  &trans  &trans  &trans
+&kp TAB  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &trans  &trans  &trans  &trans  &trans  &tog 6  &kp E  &kp LSHFT  &kp A  &kp W  &kp D  &kp F  &trans  &trans  &trans  &trans  &trans  &game_exit 0 6  &kp M  &kp LCTRL  &trans  &kp S  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp SPACE  &mo 7  &trans  &trans  &trans
             >;
         };
 
