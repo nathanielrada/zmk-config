@@ -4,17 +4,10 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
-#define DEFAULT_LAYER_BINDINGS \
-    &kp TAB    &kp Q &kp W &kp E &kp R &kp T    &kp Y &kp U &kp I    &kp O   &kp P    &kp BSPC \
-    &kp ESCAPE &kp A &kp S &kp D &kp F &kp G    &kp H &kp J &kp K    &kp L   &kp SEMI &kp SQT  \
-    &kp LSHIFT &kp Z &kp X &kp C &kp V &kp B    &kp N &kp M &kp COMMA &kp DOT &kp FSLH &kp RGUI \
-               &kp LALT &kp SPACE &mo 1 &mo 2 &kp RET &kp RCTRL
-
 / {
     // Define a default keymap here.
     // See https://zmk.dev/docs/development/hardware-integration/new-shield#default-keymap.
-
-    behaviors {
+     behaviors {
         gaming_quit: gaming_quit {
             compatible = "zmk,behavior-hold-tap";
             label = "GAMING_QUIT";
@@ -26,12 +19,16 @@
             retro-tap;
         };
     };
-
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
-            bindings = < DEFAULT_LAYER_BINDINGS >;
+            bindings = <
+							&kp TAB    &kp Q &kp W &kp E &kp R &kp T    &kp Y &kp U &kp I    &kp O   &kp P    &kp BSPC \
+							&kp ESCAPE &kp A &kp S &kp D &kp F &kp G    &kp H &kp J &kp K    &kp L   &kp SEMI &kp SQT  \
+							&kp LSHIFT &kp Z &kp X &kp C &kp V &kp B    &kp N &kp M &kp COMMA &kp DOT &kp FSLH &kp RGUI \
+												 &kp LALT &kp SPACE &mo 1 &mo 2 &kp RET &kp RCTRL
+						>;
         };
 
         lower_layer {
@@ -66,7 +63,7 @@
 
         FPS_gaming {
             bindings = <
-&kp TAB  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &trans  &trans  &trans  &trans  &trans  &gaming_quit 8 0  &kp E  &kp LSHFT  &kp A  &kp W  &kp D  &kp F  &trans  &trans  &trans  &trans  &trans  &trans  &kp M  &kp LCTRL  &trans  &kp S  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp SPACE  &mo 7  &trans  &trans  &trans
+&kp TAB  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &trans  &trans  &trans  &trans  &trans  &gaming_quit 8 6  &kp E  &kp LSHFT  &kp A  &kp W  &kp D  &kp F  &trans  &trans  &trans  &trans  &trans &trans  &kp M  &kp LCTRL  &trans  &kp S  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp SPACE  &mo 7  &trans  &trans  &trans
             >;
         };
 
@@ -75,9 +72,13 @@
 &trans  &trans  &kp N9  &kp N8  &kp N7  &kp N6  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
-
         default_duplicate {
-            bindings = < DEFAULT_LAYER_BINDINGS >;
+            bindings = <
+							&kp TAB    &kp Q &kp W &kp E &kp R &kp T    &kp Y &kp U &kp I    &kp O   &kp P    &kp BSPC \
+							&kp ESCAPE &kp A &kp S &kp D &kp F &kp G    &kp H &kp J &kp K    &kp L   &kp SEMI &kp SQT  \
+							&kp LSHIFT &kp Z &kp X &kp C &kp V &kp B    &kp N &kp M &kp COMMA &kp DOT &kp FSLH &kp RGUI \
+												 &kp LALT &kp SPACE &mo 1 &mo 2 &kp RET &kp RCTRL
+						>;
         };
     };
 };
