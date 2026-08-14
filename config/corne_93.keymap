@@ -4,6 +4,12 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
+#define DEFAULT_LAYER_BINDINGS \
+    &kp TAB    &kp Q &kp W &kp E &kp R &kp T    &kp Y &kp U &kp I    &kp O   &kp P    &kp BSPC \
+    &kp ESCAPE &kp A &kp S &kp D &kp F &kp G    &kp H &kp J &kp K    &kp L   &kp SEMI &kp SQT  \
+    &kp LSHIFT &kp Z &kp X &kp C &kp V &kp B    &kp N &kp M &kp COMMA &kp DOT &kp FSLH &kp RGUI \
+               &kp LALT &kp SPACE &mo 1 &mo 2 &kp RET &kp RCTRL
+
 / {
     // Define a default keymap here.
     // See https://zmk.dev/docs/development/hardware-integration/new-shield#default-keymap.
@@ -25,9 +31,7 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            bindings = <
-&kp TAB  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp BSPC  &kp ESCAPE  &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp K  &kp L  &kp SEMI  &kp SQT  &kp LSHIFT  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RGUI  &kp LALT  &kp SPACE  &mo 1  &mo 2  &kp RET  &kp RCTRL
-            >;
+            bindings = < DEFAULT_LAYER_BINDINGS >;
         };
 
         lower_layer {
@@ -73,9 +77,7 @@
         };
 
         default_duplicate {
-            bindings = <
-&kp TAB  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp BSPC  &kp ESCAPE  &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp K  &kp L  &kp SEMI  &kp SQT  &kp LSHIFT  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RGUI  &kp LALT  &kp SPACE  &mo 1  &mo 2  &kp RET  &kp RCTRL
-            >;
+            bindings = < DEFAULT_LAYER_BINDINGS >;
         };
     };
 };
