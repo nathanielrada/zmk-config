@@ -7,7 +7,8 @@
 / {
     // Define a default keymap here.
     // See https://zmk.dev/docs/development/hardware-integration/new-shield#default-keymap.
-     behaviors {
+
+    behaviors {
         gaming_quit: gaming_quit {
             compatible = "zmk,behavior-hold-tap";
             label = "GAMING_QUIT";
@@ -19,16 +20,14 @@
             retro-tap;
         };
     };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-							&kp TAB    &kp Q &kp W &kp E &kp R &kp T    &kp Y &kp U &kp I    &kp O   &kp P    &kp BSPC \
-							&kp ESCAPE &kp A &kp S &kp D &kp F &kp G    &kp H &kp J &kp K    &kp L   &kp SEMI &kp SQT  \
-							&kp LSHIFT &kp Z &kp X &kp C &kp V &kp B    &kp N &kp M &kp COMMA &kp DOT &kp FSLH &kp RGUI \
-												 &kp LALT &kp SPACE &mo 1 &mo 2 &kp RET &kp RCTRL
-						>;
+&kp TAB  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp BSPC  &kp ESCAPE  &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp K  &kp L  &kp SEMI  &kp SQT  &kp LSHIFT  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RGUI  &kp LALT  &kp SPACE  &mo 1  &mo 2  &kp RET  &kp RCTRL
+            >;
         };
 
         lower_layer {
@@ -57,13 +56,13 @@
 
         middle {
             bindings = <
-&trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &trans  &trans  &kp F11  &kp F12  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &trans  &trans  &kp F11  &kp F12  &trans  &trans  &trans  &kp K_PLAY_PAUSE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
         FPS_gaming {
             bindings = <
-&kp TAB  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &trans  &trans  &trans  &trans  &trans  &gaming_quit 8 6  &kp E  &kp LSHFT  &kp A  &kp W  &kp D  &kp F  &trans  &trans  &trans  &trans  &trans &trans  &kp M  &kp LCTRL  &trans  &kp S  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp SPACE  &mo 7  &trans  &trans  &trans
+&kp TAB  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &trans  &trans  &trans  &trans  &trans  &gaming_quit 8 6  &kp E  &kp LSHFT  &kp A  &kp W  &kp D  &kp F  &trans  &trans  &trans  &trans  &trans  &trans  &kp M  &kp LCTRL  &trans  &kp S  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp SPACE  &mo 7  &trans  &trans  &trans
             >;
         };
 
@@ -72,13 +71,11 @@
 &trans  &trans  &kp N9  &kp N8  &kp N7  &kp N6  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
+
         default_duplicate {
             bindings = <
-							&kp TAB    &kp Q &kp W &kp E &kp R &kp T    &kp Y &kp U &kp I    &kp O   &kp P    &kp BSPC \
-							&kp ESCAPE &kp A &kp S &kp D &kp F &kp G    &kp H &kp J &kp K    &kp L   &kp SEMI &kp SQT  \
-							&kp LSHIFT &kp Z &kp X &kp C &kp V &kp B    &kp N &kp M &kp COMMA &kp DOT &kp FSLH &kp RGUI \
-												 &kp LALT &kp SPACE &mo 1 &mo 2 &kp RET &kp RCTRL
-						>;
+&kp TAB  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp BSPC  &kp ESCAPE  &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp K  &kp L  &kp SEMI  &kp SQT  &kp LSHIFT  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RGUI  &kp LALT  &kp SPACE  &mo 1  &mo 2  &kp RET  &kp RCTRL
+            >;
         };
     };
 };
