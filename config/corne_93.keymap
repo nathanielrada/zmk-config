@@ -20,39 +20,35 @@
             retro-tap;
         };
 
-        win_snap: win_snap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "WIN_SNAP";
-            bindings = <&win_snap_macro>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            retro-tap;
-            hold-while-undecided;
-        };
+				esc_win_ht: esc_win_hold_tap {
+						compatible = "zmk,behavior-hold-tap";
+						label = "ESC_WIN_HOLD_TAP";
+						#binding-cells = <2>;
+						flavor = "hold-preferred";
+						tapping-term-ms = <200>;
+						hold-while-undecided;
+						retro-tap;
+						bindings = <&win_gui_layer>, <&kp>;
+				};
     };
 
-    macros {
-        win_snap_macro: win_snap_macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&mo 1 &kp LEFT_WIN>,
-                <&macro_pause_for_release>,
-                <&macro_release>,
-                <&mo 1 &kp LEFT_WIN>;
-
-            label = "WIN_SNAP_MACRO";
-        };
-    };
+		macros {
+				win_gui_layer: win_gui_layer {
+						compatible = "zmk,behavior-macro";
+						#binding-cells = <0>;
+						label = "WIN_GUI_LAYER";
+						bindings = <&macro_press &mo 1 &kp LGUI>
+											, <&macro_pause_for_release>
+											, <&macro_release &mo 1 &kp LGUI>;
+				};
+		};
 
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-&kp TAB  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp BSPC  &kp ESCAPE  &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp K  &kp L  &kp SEMI  &kp SQT  &kp LSHIFT  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RGUI  &kp LALT  &kp SPACE  &mo 1  &mo 2  &kp RET  &kp RCTRL
+&kp TAB  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp BSPC  &esc_win_ht 0 ESC  &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp K  &kp L  &kp SEMI  &kp SQT  &kp LSHIFT  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RGUI  &kp LALT  &kp SPACE  &mo 1  &mo 2  &kp RET  &kp RCTRL
             >;
         };
 
@@ -100,7 +96,13 @@
 
         default_duplicate {
             bindings = <
-&kp TAB  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp BSPC  &kp ESCAPE  &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp K  &kp L  &kp SEMI  &kp SQT  &kp LSHIFT  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RGUI  &kp LALT  &kp SPACE  &mo 1  &mo 2  &kp RET  &kp RCTRL
+&kp TAB  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp BSPC  &esc_win_ht 0 ESC  &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp K  &kp L  &kp SEMI  &kp SQT  &kp LSHIFT  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RGUI  &kp LALT  &kp SPACE  &mo 1  &mo 2  &kp RET  &kp RCTRL
+            >;
+        };
+
+        lower_layer {
+            bindings = <
+&trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &trans  &trans  &kp LC(A)  &trans  &trans  &trans  &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans  &kp DEL  &trans  &trans  &kp LC(X)  &kp LC(C)  &kp LC(V)  &trans  &kp HOME  &kp PAGE_UP  &kp PAGE_DOWN  &kp END  &trans  &trans  &mo 3  &mo 4  &trans  &mo 5  &trans  &trans
             >;
         };
 
