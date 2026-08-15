@@ -19,6 +19,16 @@
             hold-while-undecided;
             retro-tap;
         };
+
+        win_snap: win_snap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "WIN_SNAP";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            retro-tap;
+        };
     };
 
     keymap {
@@ -26,7 +36,7 @@
 
         default_layer {
             bindings = <
-&kp TAB  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp BSPC  &kp ESCAPE  &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp K  &kp L  &kp SEMI  &kp SQT  &kp LSHIFT  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RGUI  &kp LALT  &kp SPACE  &mo 1  &mo 2  &kp RET  &kp RCTRL
+&kp TAB  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp BSPC  &win_snap 1 ESCAPE  &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp K  &kp L  &kp SEMI  &kp SQT  &kp LSHIFT  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RGUI  &kp LALT  &kp SPACE  &mo 1  &mo 2  &kp RET  &kp RCTRL
             >;
         };
 
