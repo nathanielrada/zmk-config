@@ -20,28 +20,30 @@
             retro-tap;
         };
 
-				esc_win_ht: esc_win_hold_tap {
-						compatible = "zmk,behavior-hold-tap";
-						label = "ESC_WIN_HOLD_TAP";
-						#binding-cells = <2>;
-						flavor = "hold-preferred";
-						tapping-term-ms = <200>;
-						hold-while-undecided;
-						retro-tap;
-						bindings = <&win_gui_layer>, <&kp>;
-				};
+        esc_win_ht: esc_win_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "ESC_WIN_HOLD_TAP";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            retro-tap;
+            bindings = <&win_gui_layer>, <&kp>;
+        };
     };
 
-		macros {
-				win_gui_layer: win_gui_layer {
-						compatible = "zmk,behavior-macro";
-						#binding-cells = <0>;
-						label = "WIN_GUI_LAYER";
-						bindings = <&macro_press &mo 1 &kp LGUI>
-											, <&macro_pause_for_release>
-											, <&macro_release &mo 1 &kp LGUI>;
-				};
-		};
+    macros {
+        win_gui_layer: win_gui_layer {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            label = "WIN_GUI_LAYER";
+            bindings =
+                <&macro_press>,
+                <&mo 1 &kp LGUI>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&mo 1 &kp LGUI>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
