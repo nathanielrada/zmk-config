@@ -7,7 +7,8 @@
 / {
     // Define a default keymap here.
     // See https://zmk.dev/docs/development/hardware-integration/new-shield#default-keymap.
-		//
+    //
+
     behaviors {
         gaming_quit: gaming_quit {
             compatible = "zmk,behavior-hold-tap";
@@ -38,10 +39,10 @@
             label = "WIN_GUI_LAYER";
             bindings =
                 <&macro_press>,
-                <&mo 0 &mo 9 &kp LGUI>,
+                <&kp LGUI &mo 0 &mo 9>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&mo 0 &mo 9 &kp LGUI>;
+                <&kp LGUI &mo 0 &mo 9>;
         };
     };
 
