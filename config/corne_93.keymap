@@ -39,10 +39,10 @@
             label = "WIN_GUI_LAYER";
             bindings =
                 <&macro_press>,
-                <&kp LGUI &mo 0 &mo 9>,
+                <&kp LGUI &mo 9>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&kp LGUI &mo 0 &mo 9>;
+                <&kp LGUI &mo 9>;
         };
     };
 
