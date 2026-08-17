@@ -54,13 +54,13 @@
 
         default_layer {
             bindings = <
-&kp TAB  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp BSPC  &esc_win_ht 0 ESC  &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp K  &kp L  &kp SEMI  &kp SQT  &kp LSHIFT  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RGUI  &kp LALT  &kp SPACE  &mo 1  &mo 2  &kp RET  &kp RCTRL
+&kp TAB  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp BSPC  &esc_win_ht 0 ESC  &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp K  &kp L  &kp SEMI  &kp SQT  &kp LSHIFT  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp DEL  &kp LALT  &kp SPACE  &mo 1  &mo 2  &kp RET  &kp RCTRL
             >;
         };
 
         lower_layer {
             bindings = <
-&trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &trans  &trans  &kp LC(A)  &trans  &trans  &trans  &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp HOME  &kp DEL  &trans  &trans  &kp LC(X)  &kp LC(C)  &kp LC(V)  &trans  &trans  &kp PAGE_DOWN  &kp PAGE_UP  &trans  &kp END  &trans  &mo 3  &mo 4  &trans  &mo 5  &trans  &trans
+&trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &trans  &trans  &kp LC(A)  &trans  &trans  &trans  &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp HOME  &trans  &trans  &trans  &kp LC(X)  &kp LC(C)  &kp LC(V)  &trans  &trans  &kp PAGE_DOWN  &kp PAGE_UP  &trans  &kp END  &trans  &mo 3  &mo 4  &trans  &mo 5  &trans  &trans
             >;
         };
 
