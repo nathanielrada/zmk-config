@@ -35,6 +35,7 @@
             compatible = "zmk,behavior-toggle-layer";
             label = "ALT_TAB_HJKL";
             #binding-cells = <1>;
+						toggle-mode = "on";
         };
     };
 
