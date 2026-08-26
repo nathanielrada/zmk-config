@@ -30,6 +30,12 @@
             retro-tap;
             bindings = <&win_gui_layer>, <&kp>;
         };
+
+        alt_tab_hjkl: alt_tab_hjkl {
+            compatible = "zmk,behavior-toggle-layer";
+            label = "ALT_TAB_HJKL";
+            #binding-cells = <1>;
+        };
     };
 
     macros {
@@ -68,7 +74,7 @@
         alt_tab: alt_tab {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&tog 1 &kp TAB>;
+            bindings = <&kp TAB &alt_tab_hjkl 1>;
             label = "ALT_TAB";
         };
     };
@@ -136,7 +142,7 @@
             >;
         };
 
-        alt_hjkl {
+        alt {
             bindings = <
 &alt_tab  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
