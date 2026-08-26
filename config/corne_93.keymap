@@ -58,7 +58,7 @@
                 <&macro_release>,
                 <&kp LALT &mo 10 &to 0>;
 
-            label = "ALT_TAB";
+            label = "ALT";
         };
 
         alt_tab: alt_tab {
