@@ -60,7 +60,7 @@
 
         lower_layer {
             bindings = <
-&trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &trans  &trans  &kp LC(A)  &trans  &trans  &trans  &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp HOME  &trans  &trans  &trans  &kp LC(X)  &kp LC(C)  &kp LC(V)  &trans  &trans  &kp PAGE_DOWN  &kp PAGE_UP  &trans  &kp END  &trans  &mo 3  &mo 4  &trans  &mo 5  &trans  &trans
+&trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp HOME  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp PAGE_DOWN  &kp PAGE_UP  &trans  &kp END  &trans  &mo 3  &mo 4  &trans  &mo 5  &trans  &trans
             >;
         };
 
