@@ -56,7 +56,9 @@
                 <&kp LALT &mo 10>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&kp LALT &mo 10 &to 0>;
+                <&kp LALT &mo 10>,
+                <&macro_press>,
+                <&to 0>;
 
             label = "ALT";
             wait-ms = <0>;
