@@ -37,6 +37,15 @@
             #binding-cells = <1>;
             toggle-mode = "on";
         };
+
+        indefinite_sticky_key: indefinite_sticky_key {
+            compatible = "zmk,behavior-sticky-key";
+            label = "INDEFINITE_STICKY_KEY";
+            bindings = <&kp>;
+            #binding-cells = <1>;
+            release-after-ms = <86400000>;
+            quick-release;
+        };
     };
 
     macros {
@@ -84,7 +93,7 @@
         compatible = "zmk,combos";
 
         df-ctrl {
-            bindings = <&sk LCTRL>;
+            bindings = <&indefinite_sticky_key LCTRL>;
             key-positions = <15 16>;
         };
     };
