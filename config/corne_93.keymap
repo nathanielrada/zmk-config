@@ -84,7 +84,7 @@
         compatible = "zmk,combos";
 
         df-ctrl {
-            bindings = <&sk LCTRL>;
+            bindings = <&kt LCTRL>;
             key-positions = <15 16>;
         };
     };
