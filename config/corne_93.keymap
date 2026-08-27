@@ -93,7 +93,7 @@
         compatible = "zmk,combos";
 
         df-ctrl {
-            bindings = <&indefinite_sticky_key LCTRL>;
+            bindings = <&sk LCTRL>;
             key-positions = <15 16>;
         };
     };
