@@ -46,6 +46,16 @@
             release-after-ms = <86400000>;
             quick-release;
         };
+
+        ctrl_hold_tap: ctrl_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "CTRL_HOLD_TAP";
+            bindings = <&kp>, <&sk>;
+
+            #binding-cells = <2>;
+            hold-while-undecided;
+            tapping-term-ms = <150>;
+        };
     };
 
     macros {
@@ -93,7 +103,7 @@
         compatible = "zmk,combos";
 
         df-ctrl {
-            bindings = <&sk LCTRL>;
+            bindings = <&ctrl_hold_tap LCTRL LCTRL>;
             key-positions = <15 16>;
         };
     };
