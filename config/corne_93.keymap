@@ -109,7 +109,7 @@
 
         gaming {
             bindings = <&tog 11>;
-            key-positions = <16 15 14 3>;
+            key-positions = <16 14 3>;
         };
     };
 
