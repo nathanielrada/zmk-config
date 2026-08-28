@@ -104,13 +104,13 @@
         };
 
         bootloader_left {
-            bindings = <&bootloader>;
-            key-positions = <5 17 29>;
+            bindings = <&mo 11>;
+            key-positions = <5 29>;
         };
 
         bootloader_right {
-            bindings = <&bootloader>;
-            key-positions = <6 18 30>;
+            bindings = <&mo 11>;
+            key-positions = <6 30>;
         };
 
         mouse {
