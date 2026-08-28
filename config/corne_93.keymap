@@ -179,7 +179,7 @@
 
         gaming_general {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &to 0  &lt 13 ESCAPE  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LCTRL  &trans  &mo 12  &trans  &trans  &trans
+&kp T  &kp TAB  &kp Q  &kp W  &kp E  &kp R  &trans  &trans  &trans  &trans  &trans  &to 0  &kp G  &kp ESC  &kp A  &kp S  &kp D  &kp F  &trans  &trans  &trans  &trans  &trans  &trans  &kp B  &kp LSHFT  &kp Z  &kp X  &kp C  &kp V  &trans  &trans  &trans  &trans  &trans  &trans  &kp LCTRL  &lt 13 SPACE  &mo 12  &trans  &trans  &trans
             >;
         };
 
