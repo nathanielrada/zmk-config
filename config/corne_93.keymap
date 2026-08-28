@@ -177,9 +177,15 @@
             >;
         };
 
-        alt_to_ctrl {
+        gaming_general {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &to 0  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LCTRL  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        gaming_general_2 {
+            bindings = <
+&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp N4  &kp N5  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
