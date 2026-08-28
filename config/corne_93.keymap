@@ -10,17 +10,6 @@
     //
 
     behaviors {
-        gaming_quit: gaming_quit {
-            compatible = "zmk,behavior-hold-tap";
-            label = "GAMING_QUIT";
-            bindings = <&mo>, <&tog>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            hold-while-undecided;
-            retro-tap;
-        };
-
         esc_win_ht: esc_win_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "ESC_WIN_HOLD_TAP";
@@ -36,15 +25,6 @@
             label = "ALT_TAB_HJKL";
             #binding-cells = <1>;
             toggle-mode = "on";
-        };
-
-        indefinite_sticky_key: indefinite_sticky_key {
-            compatible = "zmk,behavior-sticky-key";
-            label = "INDEFINITE_STICKY_KEY";
-            bindings = <&kp>;
-            #binding-cells = <1>;
-            release-after-ms = <86400000>;
-            quick-release;
         };
 
         ctrl_hold_tap: ctrl_hold_tap {
@@ -65,10 +45,10 @@
             label = "WIN_GUI_LAYER";
             bindings =
                 <&macro_press>,
-                <&kp LGUI &mo 7>,
+                <&kp LGUI &mo 5>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&kp LGUI &mo 7>;
+                <&kp LGUI &mo 5>;
 
             wait-ms = <0>;
             tap-ms = <0>;
@@ -79,10 +59,10 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LALT &mo 8>,
+                <&kp LALT &mo 6>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&kp LALT &mo 8>,
+                <&kp LALT &mo 6>,
                 <&macro_tap>,
                 <&to 0>;
 
@@ -108,7 +88,7 @@
         };
 
         gaming {
-            bindings = <&tog 9>;
+            bindings = <&tog 7>;
             key-positions = <16 14 3>;
         };
 
@@ -160,18 +140,6 @@
             >;
         };
 
-        FPS_gaming {
-            bindings = <
-&kp TAB  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &trans  &trans  &trans  &trans  &trans  &gaming_quit 6 4  &kp E  &kp LSHFT  &kp A  &kp W  &kp D  &kp F  &trans  &trans  &trans  &trans  &trans  &trans  &kp M  &kp LCTRL  &trans  &kp S  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp SPACE  &mo 5  &trans  &trans  &trans
-            >;
-        };
-
-        FPS_gaming_layer_2 {
-            bindings = <
-&trans  &trans  &kp N9  &kp N8  &kp N7  &kp N6  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-            >;
-        };
-
         default_duplicate {
             bindings = <
 &kp TAB  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp BSPC  &esc_win_ht 0 ESC  &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp K  &kp L  &kp SEMI  &kp SQT  &kp LSHIFT  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RGUI  &kp LALT  &kp SPACE  &mo 1  &mo 2  &kp RET  &kp RCTRL
@@ -192,7 +160,7 @@
 
         gaming_general {
             bindings = <
-&kp T  &kp TAB  &kp Q  &kp W  &kp E  &kp R  &trans  &trans  &trans  &trans  &trans  &to 0  &kp G  &kp ESC  &kp A  &kp S  &kp D  &kp F  &trans  &trans  &trans  &trans  &trans  &trans  &kp B  &kp LSHFT  &kp Z  &kp X  &kp C  &kp V  &trans  &trans  &trans  &trans  &trans  &trans  &kp LCTRL  &lt 11 SPACE  &mo 10  &trans  &trans  &trans
+&kp T  &kp TAB  &kp Q  &kp W  &kp E  &kp R  &trans  &trans  &trans  &trans  &trans  &to 0  &kp G  &kp ESC  &kp A  &kp S  &kp D  &kp F  &trans  &trans  &trans  &trans  &trans  &trans  &kp B  &kp LSHFT  &kp Z  &kp X  &kp C  &kp V  &trans  &trans  &trans  &trans  &trans  &trans  &kp LCTRL  &lt 9 SPACE  &mo 8  &trans  &trans  &trans
             >;
         };
 
