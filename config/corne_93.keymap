@@ -93,11 +93,6 @@
             key-positions = <16 14 3>;
         };
 
-        soft_off_left {
-            bindings = <&soft_off>;
-            key-positions = <36 37 38>;
-        };
-
         soff_off_right {
             bindings = <&soft_off>;
             key-positions = <39 40 41>;
@@ -105,12 +100,12 @@
 
         bootloader_left {
             bindings = <&mo 11>;
-            key-positions = <5 29>;
+            key-positions = <36 38>;
         };
 
         bootloader_right {
             bindings = <&mo 11>;
-            key-positions = <6 30>;
+            key-positions = <39 41>;
         };
     };
 
@@ -185,7 +180,7 @@
 
         bootloader {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &bootloader  &bootloader  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &bootloader  &trans  &trans  &bootloader  &trans
             >;
         };
     };
