@@ -34,7 +34,7 @@
             #binding-cells = <0>;
             bindings = <&mo 1>, <&kp LCTRL>;
 
-            tapping-term-ms = <200>;
+            tapping-term-ms = <250>;
         };
     };
 
