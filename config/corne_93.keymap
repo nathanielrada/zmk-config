@@ -28,13 +28,12 @@
             toggle-mode = "on";
         };
 
-        ctrl_hold_tap: ctrl_hold_tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "CTRL_HOLD_TAP";
-            bindings = <&kp>, <&sk>;
+        lower_and_ctrl: lower_and_ctrl {
+            compatible = "zmk,behavior-tap-dance";
+            label = "LOWER_AND_CTRL";
+            #binding-cells = <0>;
+            bindings = <&mo 1>, <&kp LCTRL>;
 
-            #binding-cells = <2>;
-            hold-while-undecided;
             tapping-term-ms = <150>;
         };
     };
@@ -104,7 +103,7 @@
 
         default_layer {
             bindings = <
-&kp TAB  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp BSPC  &esc_win_ht 0 ESC  &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp K  &kp L  &kp SEMI  &kp SQT  &kp LSHIFT  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp DEL  &alt  &kp SPACE  &mo 1  &mo 2  &kp RET  &kp LCTRL
+&kp TAB  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp BSPC  &esc_win_ht 0 ESC  &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp K  &kp L  &kp SEMI  &kp SQT  &kp LSHIFT  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp DEL  &alt  &kp SPACE  &lower_and_ctrl  &mo 2  &kp RET  &kp LCTRL
             >;
         };
 
