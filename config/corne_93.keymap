@@ -45,6 +45,16 @@
 
             tapping-term-ms = <250>;
         };
+
+        del_shift_hold_tap: del_shift_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "DEL_SHIFT_HOLD_TAP";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            retro-tap;
+            tapping-term-ms = <60000>;
+        };
     };
 
     macros {
@@ -112,7 +122,7 @@
 
         default_layer {
             bindings = <
-&kp TAB  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp BSPC  &esc_win_ht 0 ESC  &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp K  &kp L  &kp SEMI  &kp SQT  &kp LSHIFT  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &mt RIGHT_SHIFT DELETE  &alt  &kp SPACE  &lower_and_ctrl  &mo 2  &kp RET  &kp LCTRL
+&kp TAB  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp BSPC  &esc_win_ht 0 ESC  &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp K  &kp L  &kp SEMI  &kp SQT  &kp LSHIFT  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &del_shift_hold_tap RIGHT_SHIFT DELETE  &alt  &kp SPACE  &lower_and_ctrl  &mo 2  &kp RET  &kp LCTRL
             >;
         };
 
