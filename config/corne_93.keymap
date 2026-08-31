@@ -11,16 +11,6 @@
     //
 
     behaviors {
-        esc_win_ht: esc_win_hold_tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "ESC_WIN_HOLD_TAP";
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <60000>;  // 60 seconds — effectively "no timeout"
-            retro-tap;
-            bindings = <&win_gui_layer>, <&kp>;
-        };
-
         alt_tab_hjkl: alt_tab_hjkl {
             compatible = "zmk,behavior-toggle-layer";
             label = "ALT_TAB_HJKL";
