@@ -47,9 +47,9 @@
             flavor = "tap-unless-interrupted";
         };
 
-        ctrl_tab: ctrl_tab {
+        ctrl_tab_behavior: ctrl_tab_behavior {
             compatible = "zmk,behavior-toggle-layer";
-            label = "CTRL_TAB";
+            label = "CTRL_TAB_BEHAVIOR";
             #binding-cells = <1>;
             toggle-mode = "on";
         };
@@ -98,7 +98,7 @@
         ctrl_tab: ctrl_tab {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp TAB &ctrl_tab 12>;
+            bindings = <&kp TAB &ctrl_tab_behavior 12>;
             label = "CTRL_TAB";
         };
     };
@@ -193,7 +193,7 @@
 
         ctrl {
             bindings = <
-&ctrl_tab 12  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&ctrl_tab_behavior 12  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
