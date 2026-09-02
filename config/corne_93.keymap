@@ -44,6 +44,7 @@
             #binding-cells = <2>;
             retro-tap;
             tapping-term-ms = <60000>;
+            flavor = "tap-preferred";
         };
 
         my_layer_tap: my_layer_tap {
