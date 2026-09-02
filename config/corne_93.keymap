@@ -51,6 +51,7 @@
             compatible = "zmk,behavior-toggle-layer";
             label = "CTRL_TAB";
             #binding-cells = <1>;
+            toggle-mode = "on";
         };
     };
 
