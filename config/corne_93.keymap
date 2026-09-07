@@ -24,7 +24,7 @@
             #binding-cells = <0>;
             bindings = <&mo 1>, <&kp LCTRL>;
 
-            tapping-term-ms = <250>;
+            tapping-term-ms = <300>;
         };
 
         gaming2_and_mirror: gaming2_and_mirror {
