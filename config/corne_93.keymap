@@ -45,6 +45,7 @@
             retro-tap;
             tapping-term-ms = <60000>;
             flavor = "tap-unless-interrupted";
+            require-prior-idle-ms = <150>;
         };
     };
 
