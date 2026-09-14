@@ -27,11 +27,11 @@
             tapping-term-ms = <300>;
         };
 
-        gaming2_and_no_2: gaming2_and_no_2 {
+        gaming2_and_no_3: gaming2_and_no_3 {
             compatible = "zmk,behavior-tap-dance";
-            label = "GAMING2_AND_NO_2";
+            label = "GAMING2_AND_NO_3";
             #binding-cells = <0>;
-            bindings = <&mo 6>, <&kp NUMBER_2>;
+            bindings = <&mo 6>, <&kp NUMBER_3>;
 
             tapping-term-ms = <250>;
         };
@@ -128,7 +128,7 @@
 
         gaming_general {
             bindings = <
-&kp T  &kp TAB  &kp Q  &kp W  &kp E  &kp R  &trans  &trans  &trans  &trans  &trans  &to 0  &kp G  &lt 7 ESCAPE  &kp A  &kp S  &kp D  &kp F  &trans  &trans  &trans  &trans  &trans  &trans  &kp B  &kp LSHFT  &kp Z  &kp X  &kp C  &kp V  &trans  &trans  &trans  &trans  &trans  &trans  &kp LCTRL  &kp SPACE  &gaming2_and_no_2  &trans  &trans  &trans
+&kp T  &kp TAB  &kp Q  &kp W  &kp E  &kp R  &trans  &trans  &trans  &trans  &trans  &to 0  &kp G  &lt 7 ESCAPE  &kp A  &kp S  &kp D  &kp F  &trans  &trans  &trans  &trans  &trans  &trans  &kp B  &kp LSHFT  &kp Z  &kp X  &kp C  &kp V  &trans  &trans  &trans  &trans  &trans  &trans  &kp LCTRL  &kp SPACE  &gaming2_and_no_3  &trans  &trans  &trans
             >;
         };
 
