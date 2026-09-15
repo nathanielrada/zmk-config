@@ -40,40 +40,25 @@
         compatible = "zmk,soft-off-wakeup-sources";
         wakeup-sources = <&kscan>, <&wakeup_scan>;
     };
+};
+/ {
+    aliases {
+        led-red = &led0;
+        led-green = &led1;
+        led-blue = &led2;
+    };
+
     leds {
         compatible = "gpio-leds";
-
-        caps_lock_led: caps_lock_led {
-            gpios = <&gpio0 6 GPIO_ACTIVE_HIGH>;
+        status = "okay";
+        led0: led_0 {
+            gpios = <&gpio0 7 GPIO_ACTIVE_HIGH>; // red LED, connected to P0.26
         };
-    };
-    indicators {
-        compatible = "zmk,indicator-leds";
-
-        caps_lock_indicator: caps_lock {
-            indicator = <HID_INDICATOR_CAPS_LOCK>;
-            leds = <&caps_lock_led>;
+        led1: led_1 {
+            gpios = <&gpio0 6 GPIO_ACTIVE_HIGH>; // green LED, connected to P0.30
+        };
+        led2: led_2 {
+            gpios = <&gpio0 5 GPIO_ACTIVE_HIGH>;  // blue LED, connected to P0.06
         };
     };
 };
-/* / { */
-/*     aliases { */
-/*         led-red = &led0; */
-/*         led-green = &led1; */
-/*         led-blue = &led2; */
-/*     }; */
-/**/
-/*     leds { */
-/*         compatible = "gpio-leds"; */
-/*         status = "okay"; */
-/*         led0: led_0 { */
-/*             gpios = <&gpio0 7 GPIO_ACTIVE_LOW>; // red LED, connected to P0.26 */
-/*         }; */
-/*         led1: led_1 { */
-/*             gpios = <&gpio0 6 GPIO_ACTIVE_LOW>; // green LED, connected to P0.30 */
-/*         }; */
-/*         led2: led_2 { */
-/*             gpios = <&gpio0 5 GPIO_ACTIVE_LOW>;  // blue LED, connected to P0.06 */
-/*         }; */
-/*     }; */
-/* }; */
