@@ -41,6 +41,7 @@
     };
     leds {
         compatible = "gpio-leds";
+				status = "okay";
         led_red: led_red {
             gpios = <&gpio0 7 GPIO_ACTIVE_HIGH>;
         };
