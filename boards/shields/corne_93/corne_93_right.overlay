@@ -39,4 +39,22 @@
         compatible = "zmk,soft-off-wakeup-sources";
         wakeup-sources = <&kscan>, <&wakeup_scan>;
     };
+    leds {
+        compatible = "gpio-leds";
+        led_red: led_red {
+            gpios = <&gpio0 7 GPIO_ACTIVE_HIGH>;
+        };
+        led_green: led_green {
+            gpios = <&gpio0 6 GPIO_ACTIVE_HIGH>;
+        };
+        led_blue: led_blue {
+            gpios = <&gpio1 5 GPIO_ACTIVE_HIGH>;
+        };
+    };
+
+    aliases {
+        led-red = &led_red;
+        led-green = &led_green;
+        led-blue = &led_blue;
+    };
 };
