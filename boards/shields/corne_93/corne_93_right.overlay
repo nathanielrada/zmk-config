@@ -39,6 +39,8 @@
         compatible = "zmk,soft-off-wakeup-sources";
         wakeup-sources = <&kscan>, <&wakeup_scan>;
     };
+};
+/ {
     aliases {
         led-red = &led0;
         led-green = &led1;
