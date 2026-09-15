@@ -1,5 +1,4 @@
 #include "corne_93.dtsi"
-#include <dt-bindings/zmk/hid_indicators.h>
 
 &kscan {
     row-gpios
