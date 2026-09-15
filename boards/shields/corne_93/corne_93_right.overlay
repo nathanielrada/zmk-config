@@ -49,15 +49,12 @@
             gpios = <&gpio0 6 GPIO_ACTIVE_HIGH>;
         };
         led_blue: led_blue {
-            gpios = <&gpio1 5 GPIO_ACTIVE_HIGH>;
+            gpios = <&gpio0 5 GPIO_ACTIVE_HIGH>;
         };
     };
     aliases {
         led-red = &led_red;
         led-green = &led_green;
         led-blue = &led_blue;
-        led_red = &led_red;
-        led_green = &led_green;
-        led_blue = &led_blue;
     };
 };
