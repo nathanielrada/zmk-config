@@ -17,6 +17,8 @@
         , <&pro_micro 2 GPIO_ACTIVE_HIGH>
         ;
 };
+
+
 / {
     soft_off_gpio_key: soft_off_gpio_key {
         compatible = "gpio-keys";
@@ -37,3 +39,24 @@
         wakeup-sources = <&kscan>, <&wakeup_scan>;
     };
 };
+/ {
+    aliases {
+        led-red = &led0;
+        led-green = &led1;
+        led-blue = &led2;
+    };
+
+    leds {
+        compatible = "gpio-leds";
+        status = "okay";
+        led0: led_0 {
+            gpios = <&pro_micro 18 GPIO_ACTIVE_HIGH>;
+        };
+        led1: led_1 {
+            gpios = <&pro_micro 19 GPIO_ACTIVE_HIGH>;
+        };
+        led2: led_2 {
+            gpios = <&pro_micro 20 GPIO_ACTIVE_HIGH>;
+        };
+    };
+}
