@@ -28,15 +28,6 @@
             tapping-term-ms = <300>;
         };
 
-        gaming2_and_no_3: gaming2_and_no_3 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "GAMING2_AND_NO_3";
-            #binding-cells = <0>;
-            bindings = <&gaming2_and_alt>, <&kp NUMBER_3>;
-
-            tapping-term-ms = <0>;
-        };
-
         my_hold_tap: my_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "MY_HOLD_TAP";
@@ -48,14 +39,14 @@
             flavor = "balanced";
         };
 
-        hold_tap_no_delay: hold_tap_no_delay {
+        gaming2: gaming2 {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOLD_TAP_NO_DELAY";
+            label = "GAMING2";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            bindings = <&kp>, <&gaming2_and_alt>;
+            bindings = <&gaming2_and_alt>, <&kp>;
 
-            tapping-term-ms = <150>;
+            tapping-term-ms = <250>;
         };
     };
 
@@ -154,7 +145,7 @@
 
         gaming_general {
             bindings = <
-&kp T  &kp TAB  &kp Q  &kp W  &kp E  &kp R  &trans  &trans  &trans  &trans  &trans  &to 0  &kp G  &lt 7 ESCAPE  &kp A  &kp S  &kp D  &kp F  &trans  &trans  &trans  &trans  &trans  &trans  &kp B  &kp LSHFT  &kp Z  &kp X  &kp C  &kp V  &trans  &trans  &trans  &trans  &trans  &trans  &kp LCTRL  &kp SPACE  &hold_tap_no_delay NUMBER_3 &gaming2_and_alt &trans  &trans  &trans
+&kp T  &kp TAB  &kp Q  &kp W  &kp E  &kp R  &trans  &trans  &trans  &trans  &trans  &to 0  &kp G  &lt 7 ESCAPE  &kp A  &kp S  &kp D  &kp F  &trans  &trans  &trans  &trans  &trans  &trans  &kp B  &kp LSHFT  &kp Z  &kp X  &kp C  &kp V  &trans  &trans  &trans  &trans  &trans  &trans  &kp LCTRL  &kp SPACE  &gaming2 NUMBER_3 NUMBER_3  &gaming2_and_alt  &trans  &trans
             >;
         };
 
