@@ -49,13 +49,15 @@
             tapping-term-ms = <250>;
         };
 
-        alt_layer_tap: alt_layer_tap {
+        alt_layer: alt_layer {
             compatible = "zmk,behavior-hold-tap";
+            label = "ALT_LAYER";
+            bindings = <&mo>, <&kp>;
+
             #binding-cells = <2>;
             flavor = "tap-unless-interrupted";
             tapping-term-ms = <200>;
             hold-while-undecided;
-            bindings = <&kp>, <&kp>;
         };
     };
 
@@ -154,7 +156,7 @@
 
         gaming_general {
             bindings = <
-&kp T  &kp TAB  &kp Q  &kp W  &kp E  &kp R  &trans  &trans  &trans  &trans  &trans  &to 0  &kp G  &lt 7 ESCAPE  &kp A  &kp S  &kp D  &kp F  &trans  &trans  &trans  &trans  &trans  &trans  &kp B  &kp LSHFT  &kp Z  &kp X  &kp C  &kp V  &trans  &trans  &trans  &trans  &trans  &trans  &kp LCTRL  &kp SPACE  &gaming2 NUMBER_3 NUMBER_3  &gaming2_and_alt  &trans  &trans
+&kp T  &kp TAB  &kp Q  &kp W  &kp E  &kp R  &trans  &trans  &trans  &trans  &trans  &to 0  &kp G  &lt 7 ESCAPE  &kp A  &kp S  &kp D  &kp F  &trans  &trans  &trans  &trans  &trans  &trans  &kp B  &kp LSHFT  &kp Z  &kp X  &kp C  &kp V  &trans  &trans  &trans  &trans  &trans  &trans  &kp LCTRL  &kp SPACE  &alt_layer 6 NUMBER_3  &lt 1 N3  &trans  &trans
             >;
         };
 
