@@ -48,6 +48,15 @@
 
             tapping-term-ms = <250>;
         };
+
+        alt_layer_tap: alt_layer_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-unless-interrupted";
+            tapping-term-ms = <200>;
+            hold-while-undecided;
+            bindings = <&kp>, <&kp>;
+        };
     };
 
     macros {
