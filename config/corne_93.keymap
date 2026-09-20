@@ -63,7 +63,7 @@
         hold_tap_non_retro: hold_tap_non_retro {
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD_TAP_NON_RETRO";
-            bindings = <&kp>, <&kp>;
+            bindings = <&kp>, <&long_press>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -121,6 +121,17 @@
                 <&kp LEFT_ALT>;
 
             label = "ALT_RELEASE";
+        };
+
+        long_press: long_press {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_wait_time 1000>,
+                <&macro_release>;
+
+            label = "LONG_PRESS";
         };
     };
 
