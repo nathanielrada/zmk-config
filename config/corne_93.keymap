@@ -151,7 +151,7 @@
 
         gaming_general {
             bindings = <
-&kp T  &kp TAB  &kp Q  &kp W  &kp E  &kp R  &trans  &trans  &trans  &trans  &trans  &to 0  &kp G  &hold_long_tap 7 ESCAPE  &kp A  &kp S  &kp D  &kp F  &trans  &trans  &trans  &trans  &trans  &trans  &kp B  &kp LSHFT  &kp Z  &kp X  &kp C  &kp V  &trans  &trans  &trans  &trans  &trans  &trans  &hold_tap_non_retro LEFT_ALT LCTRL  &kp SPACE  &hold_long_tap 6 NUMBER_3  &trans  &trans  &trans
+&kp T  &kp TAB  &kp Q  &kp W  &kp E  &kp R  &trans  &trans  &trans  &trans  &trans  &to 0  &kp G  &hold_long_tap 7 ESCAPE  &kp A  &kp S  &kp D  &kp F  &trans  &trans  &trans  &trans  &trans  &trans  &kp B  &kp LSHFT  &kp Z  &kp X  &kp C  &kp V  &trans  &trans  &trans  &trans  &trans  &trans  &kp LCTRL  &kp SPACE  &hold_long_tap 6 NUMBER_3  &trans  &trans  &trans
             >;
         };
 
