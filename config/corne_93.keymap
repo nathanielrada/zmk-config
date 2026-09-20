@@ -49,24 +49,13 @@
             tapping-term-ms = <250>;
         };
 
-        alt_layer: alt_layer {
-            compatible = "zmk,behavior-hold-tap";
-            label = "ALT_LAYER";
-            bindings = <&mo>, <&kp>;
-
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <200>;
-            hold-while-undecided;
-        };
-
         hold_tap_non_retro: hold_tap_non_retro {
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD_TAP_NON_RETRO";
             bindings = <&kp>, <&long_press>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             flavor = "tap-preferred";
         };
     };
@@ -128,10 +117,18 @@
             #binding-cells = <1>;
             bindings =
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
-                <&macro_wait_time 1000>,
+                <&macro_wait_time 500>,
                 <&macro_release>;
 
             label = "LONG_PRESS";
+        };
+
+        release_alt_temp: release_alt_temp {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_release>, <&kp LEFT_ALT>;
+
+            label = "RELEASE_ALT_TEMP";
         };
     };
 
@@ -189,7 +186,7 @@
 
         gaming_general {
             bindings = <
-&kp T  &kp TAB  &kp Q  &kp W  &kp E  &kp R  &trans  &trans  &trans  &trans  &trans  &to 0  &kp G  &lt 7 ESCAPE  &kp A  &kp S  &kp D  &kp F  &trans  &trans  &trans  &trans  &trans  &trans  &kp B  &kp LSHFT  &kp Z  &kp X  &kp C  &kp V  &trans  &trans  &trans  &trans  &trans  &trans  &hold_tap_non_retro LEFT_ALT LCTRL  &kp SPACE  &lt 6 NUMBER_3  &trans  &trans  &trans
+&kp T  &kp TAB  &kp Q  &kp W  &kp E  &kp R  &trans  &trans  &trans  &trans  &trans  &to 0  &kp G  &lt 7 ESCAPE  &kp A  &kp S  &kp D  &kp F  &trans  &trans  &trans  &trans  &trans  &trans  &kp B  &kp LSHFT  &kp Z  &kp X  &kp C  &kp V  &trans  &trans  &trans  &trans  &trans  &trans  &hold_tap_non_retro LEFT_ALT LCTRL  &kp SPACE  &lt 6 NUMBER_3  &trans  &trans  &release_alt_temp
             >;
         };
 
