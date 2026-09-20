@@ -60,13 +60,14 @@
             hold-while-undecided;
         };
 
-        ctrl_and_alt: ctrl_and_alt {
-            compatible = "zmk,behavior-tap-dance";
-            label = "CTRL_AND_ALT";
-            #binding-cells = <0>;
-            bindings = <&kp LCTRL>, <&kp LEFT_ALT>;
+        hold_tap_non_retro: hold_tap_non_retro {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLD_TAP_NON_RETRO";
+            bindings = <&kp>, <&kp>;
 
-            tapping-term-ms = <150>;
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
         };
     };
 
@@ -177,7 +178,7 @@
 
         gaming_general {
             bindings = <
-&kp T  &kp TAB  &kp Q  &kp W  &kp E  &kp R  &trans  &trans  &trans  &trans  &trans  &to 0  &kp G  &lt 7 ESCAPE  &kp A  &kp S  &kp D  &kp F  &trans  &trans  &trans  &trans  &trans  &trans  &kp B  &kp LSHFT  &kp Z  &kp X  &kp C  &kp V  &trans  &trans  &trans  &trans  &trans  &trans  &my_hold_tap LEFT_ALT LCTRL  &kp SPACE  &lt 6 NUMBER_3  &trans  &trans  &trans
+&kp T  &kp TAB  &kp Q  &kp W  &kp E  &kp R  &trans  &trans  &trans  &trans  &trans  &to 0  &kp G  &lt 7 ESCAPE  &kp A  &kp S  &kp D  &kp F  &trans  &trans  &trans  &trans  &trans  &trans  &kp B  &kp LSHFT  &kp Z  &kp X  &kp C  &kp V  &trans  &trans  &trans  &trans  &trans  &trans  &hold_tap_non_retro LEFT_ALT LCTRL  &kp SPACE  &lt 6 NUMBER_3  &trans  &trans  &trans
             >;
         };
 
