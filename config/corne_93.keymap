@@ -151,13 +151,13 @@
 
         gaming_general {
             bindings = <
-&kp T  &kp TAB  &kp Q  &kp W  &kp E  &kp R  &trans  &trans  &trans  &trans  &trans  &to 0  &kp G  &hold_long_tap 7 ESCAPE  &kp A  &kp S  &kp D  &kp F  &trans  &trans  &trans  &trans  &trans  &trans  &kp B  &kp LSHFT  &kp Z  &kp X  &kp C  &kp V  &trans  &trans  &trans  &trans  &trans  &trans  &hold_tap_non_retro LEFT_ALT LCTRL  &kp SPACE  &hold_long_tap 6 NUMBER_3  &mo 2  &trans  &trans
+&kp T  &kp TAB  &kp Q  &kp W  &kp E  &kp R  &trans  &trans  &trans  &trans  &trans  &to 0  &kp G  &hold_long_tap 7 ESCAPE  &kp A  &kp S  &kp D  &kp F  &trans  &trans  &trans  &trans  &trans  &trans  &kp B  &kp LSHFT  &kp Z  &kp X  &kp C  &kp V  &trans  &trans  &trans  &trans  &trans  &trans  &hold_tap_non_retro LEFT_ALT LCTRL  &kp SPACE  &hold_long_tap 6 NUMBER_3  &trans  &trans  &trans
             >;
         };
 
         gaming_general_2 {
             bindings = <
-&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp N4  &kp N5  &trans  &trans  &trans  &trans  &trans  &trans  &kp ESCAPE  &kp N0  &kp N9  &kp N8  &kp N7  &kp N6  &trans  &trans  &trans  &trans  &trans  &trans  &kp LWIN  &kp LEFT_ALT  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mo 3  &trans  &trans
+&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp N4  &kp N5  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp N0  &kp N9  &kp N8  &kp N7  &kp N6  &trans  &trans  &trans  &trans  &trans  &trans  &kp LWIN  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
