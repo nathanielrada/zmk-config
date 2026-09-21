@@ -58,6 +58,7 @@
             tapping-term-ms = <150>;
             flavor = "hold-preferred";
             hold-while-undecided;
+            hold-trigger-key-positions = <1 2 3 4 5 17 16 15 14 13 24>;
         };
 
         gaming_and_mirror: gaming_and_mirror {
