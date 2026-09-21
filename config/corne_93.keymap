@@ -95,19 +95,6 @@
 
             label = "LONG_PRESS";
         };
-
-        gaming_shift_hold: gaming_shift_hold {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LSHFT &mo 10>,
-                <&macro_pause_for_release>,
-                <&macro_release>,
-                <&kp LSHFT &mo 10>;
-
-            label = "GAMING_SHIFT_HOLD";
-        };
     };
 
     combos {
@@ -189,12 +176,6 @@
         bootloader {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &bootloader  &trans  &trans  &bootloader  &trans
-            >;
-        };
-
-        gaming_shift {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LEFT_ALT  &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
