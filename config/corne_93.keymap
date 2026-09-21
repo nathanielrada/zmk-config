@@ -57,6 +57,13 @@
             #binding-cells = <2>;
             tapping-term-ms = <150>;
         };
+
+        gaming_and_mirror: gaming_and_mirror {
+            compatible = "zmk,behavior-tap-dance";
+            label = "GAMING_AND_MIRROR";
+            #binding-cells = <0>;
+            bindings = <&hold_long_tap 6 NUMBER_3>, <&mo 7>;
+        };
     };
 
     macros {
@@ -151,7 +158,7 @@
 
         gaming_general {
             bindings = <
-&kp T  &lt 7 TAB  &kp Q  &kp W  &kp E  &kp R  &trans  &trans  &trans  &trans  &trans  &to 0  &kp G  &hold_tap_non_retro LEFT_ALT ESCAPE  &kp A  &kp S  &kp D  &kp F  &trans  &trans  &trans  &trans  &trans  &trans  &kp B  &kp LSHFT  &kp Z  &kp X  &kp C  &kp V  &trans  &trans  &trans  &trans  &trans  &trans  &kp LCTRL  &kp SPACE  &hold_long_tap 6 NUMBER_3  &trans  &trans  &kp RIGHT_ALT
+&kp T  &lt 7 TAB  &kp Q  &kp W  &kp E  &kp R  &trans  &trans  &trans  &trans  &trans  &to 0  &kp G  &hold_tap_non_retro LEFT_ALT ESCAPE  &kp A  &kp S  &kp D  &kp F  &trans  &trans  &trans  &trans  &trans  &trans  &kp B  &kp LSHFT  &kp Z  &kp X  &kp C  &kp V  &trans  &trans  &trans  &trans  &trans  &trans  &kp LCTRL  &kp SPACE  &gaming_and_mirror  &trans  &trans  &kp RIGHT_ALT
             >;
         };
 
