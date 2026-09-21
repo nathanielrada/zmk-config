@@ -56,7 +56,8 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <150>;
-            flavor = "tap-preferred";
+            flavor = "hold-preferred";
+            hold-while-undecided;
         };
 
         gaming_and_mirror: gaming_and_mirror {
@@ -64,6 +65,8 @@
             label = "GAMING_AND_MIRROR";
             #binding-cells = <0>;
             bindings = <&hold_long_tap 6 NUMBER_3>, <&mo 7>;
+
+            tapping-term-ms = <200>;
         };
     };
 
