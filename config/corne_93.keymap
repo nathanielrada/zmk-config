@@ -69,6 +69,15 @@
             tapping-term-ms = <100>;
             flavor = "hold-preferred";
         };
+
+        gaming_alt_hold: gaming_alt_hold {
+            compatible = "zmk,behavior-hold-tap";
+            label = "GAMING_ALT_HOLD";
+            bindings = <&gaming_alt>, <&long_press>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <100>;
+        };
     };
 
     macros {
@@ -106,6 +115,19 @@
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
 
             label = "LONG_PRESS";
+        };
+
+        gaming_alt: gaming_alt {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
+
+            label = "GAMING_ALT";
         };
     };
 
@@ -163,7 +185,7 @@
 
         gaming_general {
             bindings = <
-&kp T  &kp TAB  &kp Q  &kp W  &kp E  &kp R  &trans  &trans  &trans  &trans  &trans  &to 0  &hold_long_tap_fast 7 G  &hold_tap_non_retro LEFT_ALT ESCAPE  &kp A  &kp S  &kp D  &kp F  &trans  &trans  &trans  &trans  &trans  &trans  &kp B  &kp LSHFT  &kp Z  &kp X  &kp C  &kp V  &trans  &trans  &trans  &trans  &trans  &trans  &kp LCTRL  &kp SPACE  &hold_long_tap_fast 6 NUMBER_3  &trans  &trans  &kp RIGHT_ALT
+&kp T  &kp TAB  &kp Q  &kp W  &kp E  &kp R  &trans  &trans  &trans  &trans  &trans  &to 0  &hold_long_tap_fast 7 G  &gaming_alt_hold 0 ESCAPE  &kp A  &kp S  &kp D  &kp F  &trans  &trans  &trans  &trans  &trans  &trans  &kp B  &kp LSHFT  &kp Z  &kp X  &kp C  &kp V  &trans  &trans  &trans  &trans  &trans  &trans  &kp LCTRL  &kp SPACE  &hold_long_tap_fast 6 NUMBER_3  &trans  &trans  &kp RIGHT_ALT
             >;
         };
 
@@ -188,6 +210,12 @@
         bootloader {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &bootloader  &trans  &trans  &bootloader  &trans
+            >;
+        };
+
+        gaming_alt_hold {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LSHIFT  &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
