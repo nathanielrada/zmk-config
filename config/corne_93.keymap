@@ -161,13 +161,13 @@
 
         lower_layer {
             bindings = <
-&trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &trans  &kp ESCAPE  &trans  &trans  &trans  &mo 8  &tog 5  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp PAGE_UP  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp HOME  &kp END  &trans  &kp PAGE_DOWN  &trans  &trans  &trans  &trans  &mo 3  &trans  &trans
+&trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &trans  &kp ESCAPE  &trans  &trans  &trans  &mo 8  &tog 5  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp PAGE_UP  &trans  &kp LEFT_ALT  &trans  &trans  &trans  &trans  &trans  &trans  &kp HOME  &kp END  &trans  &kp PAGE_DOWN  &trans  &trans  &trans  &trans  &mo 3  &trans  &trans
             >;
         };
 
         raise_layer {
             bindings = <
-&trans  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT  &kp CARET  &kp AMPS  &kp ASTRK  &kp LPAR  &kp RPAR  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT  &kp BSLH  &kp GRAVE  &trans  &trans  &trans  &trans  &trans  &trans  &kp UNDER  &kp PLUS  &kp LBRC  &kp RBRC  &kp PIPE  &kp TILDE  &trans  &trans  &mo 3  &trans  &trans  &trans
+&kp TILDE  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT  &kp CARET  &kp AMPS  &kp ASTRK  &kp LPAR  &kp RPAR  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT  &kp BSLH  &kp GRAVE  &trans  &trans  &trans  &trans  &trans  &trans  &kp UNDER  &kp PLUS  &kp LBRC  &kp RBRC  &kp PIPE  &kp RCTRL  &trans  &trans  &mo 3  &trans  &trans  &trans
             >;
         };
 
