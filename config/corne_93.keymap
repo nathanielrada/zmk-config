@@ -197,7 +197,7 @@
 
         right_mirror {
             bindings = <
-&none  &kp P  &kp O  &kp I  &kp U  &kp Y  &none  &none  &none  &none  &none  &none  &none  &none  &kp L  &kp K  &kp J  &kp H  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &kp M  &kp N  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
+&none  &kp P  &kp O  &kp I  &kp U  &kp Y  &none  &none  &none  &none  &none  &none  &none  &none  &kp L  &kp K  &kp J  &kp H  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &kp M  &kp N  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &kp ENTER  &kp RIGHT_ALT
             >;
         };
 
