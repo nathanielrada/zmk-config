@@ -133,7 +133,7 @@
         gaming_toggle_macro: gaming_toggle_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&tog 0 &tog 11>;
+            bindings = <&to 0 &tog 5 &tog 11>;
             label = "GAMING_TOGGLE_MACRO";
         };
     };
