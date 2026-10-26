@@ -130,12 +130,11 @@
             label = "GAMING_ALT";
         };
 
-        gaming_toggle_macro: gaming_toggle_micro {
+        gaming_toggle_macro: gaming_toggle_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press>, <&tog 0 &tog 11>;
-
-            label = "GAMING_TOGGLE_MICRO";
+            bindings = <&tog 0 &tog 11>;
+            label = "GAMING_TOGGLE_MACRO";
         };
     };
 
