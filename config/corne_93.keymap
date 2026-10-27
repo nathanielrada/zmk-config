@@ -101,7 +101,7 @@
     };
 
     macros {
-        alt: alt {
+        alt_back_to_gaming: alt_back_to_gaming {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -109,9 +109,11 @@
                 <&kp LALT &mo 4>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&kp LALT &mo 4>;
+                <&kp LALT &mo 4>,
+                <&macro_tap>,
+                <&to 6>;
 
-            label = "ALT";
+            label = "ALT_BACK_TO_GAMING";
             wait-ms = <0>;
             tap-ms = <0>;
         };
@@ -140,10 +142,10 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LEFT_ALT &mo 10>,
+                <&kp LEFT_ALT &mo 11>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&kp LEFT_ALT &mo 10>;
+                <&kp LEFT_ALT &mo 11>;
 
             label = "GAMING_ALT";
         };
@@ -151,11 +153,11 @@
         gaming_toggle_macro: gaming_toggle_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 0 &to 11>;
+            bindings = <&to 0 &to 5 &to 12>;
             label = "GAMING_TOGGLE_MACRO";
         };
 
-        alt_bak: alt_bak {
+        alt: alt {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -167,7 +169,7 @@
                 <&macro_tap>,
                 <&to 0>;
 
-            label = "ALT_BAK";
+            label = "ALT";
             wait-ms = <0>;
             tap-ms = <0>;
         };
@@ -182,12 +184,12 @@
         };
 
         bootloader_left {
-            bindings = <&mo 9>;
+            bindings = <&mo 10>;
             key-positions = <36 38>;
         };
 
         bootloader_right {
-            bindings = <&mo 9>;
+            bindings = <&mo 10>;
             key-positions = <39 41>;
         };
     };
@@ -203,7 +205,7 @@
 
         lower_layer {
             bindings = <
-&trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &trans  &kp ESCAPE  &trans  &trans  &trans  &mo 8  &tog 5  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp PAGE_UP  &trans  &trans  &kp LALT  &trans  &trans  &trans  &trans  &trans  &kp HOME  &kp END  &trans  &kp PAGE_DOWN  &trans  &trans  &trans  &trans  &mo 3  &trans  &trans
+&trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &trans  &kp ESCAPE  &trans  &trans  &trans  &mo 9  &tog 6  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp PAGE_UP  &trans  &trans  &kp LALT  &trans  &trans  &trans  &trans  &trans  &kp HOME  &kp END  &trans  &kp PAGE_DOWN  &trans  &trans  &trans  &trans  &mo 3  &trans  &trans
             >;
         };
 
@@ -225,9 +227,15 @@
             >;
         };
 
+        alt_2 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &gaming_alt  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
         gaming_general {
             bindings = <
-&kp T  &kp TAB  &kp Q  &kp W  &kp E  &kp R  &trans  &trans  &trans  &trans  &trans  &trans  &hold_long_tap_fast 7 G  &gaming_alt_hold 0 ESCAPE  &kp A  &kp S  &kp D  &kp F  &trans  &trans  &trans  &trans  &trans  &gaming_toggle_behavior 0 0  &kp B  &kp LSHFT  &kp Z  &kp X  &kp C  &kp V  &trans  &trans  &trans  &trans  &trans  &trans  &kp LCTRL  &kp SPACE  &hold_long_tap_fast 6 NUMBER_3  &trans  &trans  &kp RIGHT_ALT
+&kp T  &kp TAB  &kp Q  &kp W  &kp E  &kp R  &trans  &trans  &trans  &trans  &trans  &trans  &hold_long_tap_fast 8 G  &gaming_alt_hold 0 ESCAPE  &kp A  &kp S  &kp D  &kp F  &trans  &trans  &trans  &trans  &trans  &gaming_toggle_behavior 0 0  &kp B  &kp LSHFT  &kp Z  &kp X  &kp C  &kp V  &trans  &trans  &trans  &trans  &trans  &trans  &kp LCTRL  &kp SPACE  &hold_long_tap_fast 7 NUMBER_3  &trans  &trans  &kp RIGHT_ALT
             >;
         };
 
@@ -263,7 +271,7 @@
 
         gaming_toggle {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &gaming_toggle_behavior_2 0 5  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &gaming_toggle_behavior_2 0 6  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
