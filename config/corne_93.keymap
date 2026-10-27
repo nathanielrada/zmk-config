@@ -78,6 +78,16 @@
             #binding-cells = <2>;
             tapping-term-ms = <100>;
         };
+
+        gaming_toggle_behavior: gaming_toggle_behavior {
+            compatible = "zmk,behavior-hold-tap";
+            label = "GAMING_TOGGLE_BEHAVIOR";
+            bindings = <&gaming_toggle_macro>, <&to>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            flavor = "tap-preferred";
+        };
     };
 
     macros {
@@ -192,7 +202,7 @@
 
         gaming_general {
             bindings = <
-&kp T  &kp TAB  &kp Q  &kp W  &kp E  &kp R  &trans  &trans  &trans  &trans  &trans  &to 0  &hold_long_tap_fast 7 G  &gaming_alt_hold 0 ESCAPE  &kp A  &kp S  &kp D  &kp F  &trans  &trans  &trans  &trans  &trans  &gaming_toggle_macro  &kp B  &kp LSHFT  &kp Z  &kp X  &kp C  &kp V  &trans  &trans  &trans  &trans  &trans  &trans  &kp LCTRL  &kp SPACE  &hold_long_tap_fast 6 NUMBER_3  &trans  &trans  &kp RIGHT_ALT
+&kp T  &kp TAB  &kp Q  &kp W  &kp E  &kp R  &trans  &trans  &trans  &trans  &trans  &trans  &hold_long_tap_fast 7 G  &gaming_alt_hold 0 ESCAPE  &kp A  &kp S  &kp D  &kp F  &trans  &trans  &trans  &trans  &trans  &gaming_toggle_behavior 0 0  &kp B  &kp LSHFT  &kp Z  &kp X  &kp C  &kp V  &trans  &trans  &trans  &trans  &trans  &trans  &kp LCTRL  &kp SPACE  &hold_long_tap_fast 6 NUMBER_3  &trans  &trans  &kp RIGHT_ALT
             >;
         };
 
@@ -228,7 +238,7 @@
 
         gaming_toggle {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &tog 5  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &gaming_toggle_behavior 0 5  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
