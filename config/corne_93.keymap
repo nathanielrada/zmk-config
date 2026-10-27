@@ -82,7 +82,7 @@
         gaming_toggle_behavior: gaming_toggle_behavior {
             compatible = "zmk,behavior-hold-tap";
             label = "GAMING_TOGGLE_BEHAVIOR";
-            bindings = <&gaming_toggle_macro>, <&to>;
+            bindings = <&to>, <&gaming_toggle_macro>;
 
             #binding-cells = <2>;
             tapping-term-ms = <150>;
