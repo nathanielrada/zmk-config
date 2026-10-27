@@ -153,7 +153,7 @@
         gaming_toggle_macro: gaming_toggle_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 0 &to 5 &to 12>;
+            bindings = <&to 0 &tog 5 &tog 12>;
             label = "GAMING_TOGGLE_MACRO";
         };
 
@@ -229,7 +229,7 @@
 
         alt_2 {
             bindings = <
-&ind_bat &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &alt_back_to_gaming  &trans  &trans  &trans  &trans  &trans
+&ind_bat  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &alt_back_to_gaming  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
